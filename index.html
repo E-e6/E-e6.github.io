@@ -1,51 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>🧋 Eve’s Boba Wonderland</title>
+  <title>🧋 Eve’s Ultimate Boba Wonderland</title>
   <link rel="stylesheet" href="style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Pacifico&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
   <div id="boba-background"></div>
 
   <nav class="boba-nav">
     <ul>
-      <li data-target="home" class="active" title="Home">🧋</li>
-      <li data-target="about" title="About Me">🍡</li>
+      <li data-target="home" class="active" title="Home">🏠</li>
+      <li data-target="about" title="About Me">👩‍💻</li>
       <li data-target="history" title="Boba History">🧉</li>
+      <li data-target="flavors" title="Popular Flavors">🍹</li>
       <li data-target="drops" title="Boba Drops">🎉</li>
-      <li data-target="contact" title="Contact">💌</li>
+      <li data-target="tips" title="Tips & Facts">💡</li>
+      <li data-target="contact" title="Contact">📬</li>
     </ul>
   </nav>
 
   <main>
     <section id="home" class="page visible">
-      <h1>Welcome to Eve's Boba Wonderland!</h1>
-      <p>Step inside for the sweetest mix of boba and code.</p>
+      <h1>Welcome to Eve's Ultimate Boba Wonderland!</h1>
+      <p>Discover the magical world of boba tea, bursting with flavor, culture, and creativity 🍓🧋✨</p>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/3616/3616473.png"
+        alt="Bubble tea cup"
+        class="hero-img"
+      />
     </section>
 
     <section id="about" class="page">
-      <h2>About Me</h2>
-      <p>I'm Eve — a coding enthusiast and boba lover, crafting cool projects with passion!</p>
-      <img src="https://cdn-icons-png.flaticon.com/512/3186/3186964.png" alt="Cute boba" />
+      <h2>👩‍💻 About Me</h2>
+      <p>
+        Hey, I’m Eve! A passionate coder & boba enthusiast. I built this site to
+        share my love for bubble tea and web design. Join me on this flavorful journey!
+      </p>
     </section>
 
     <section id="history" class="page">
-      <h2>Boba History</h2>
-      <p>Boba tea was born in Taiwan in the 1980s — chewy tapioca pearls, sweet milk tea, and endless flavors captured hearts worldwide!</p>
-      <p><em>Fun fact:</em> The name "bubble tea" comes from the frothy bubbles formed when shaking the drink.</p>
+      <h2>🧉 History of Boba Tea</h2>
+      <p>
+        Boba tea, also known as bubble tea or pearl milk tea, originated in Taiwan in
+        the early 1980s. It combines brewed tea, milk or fruit flavors, and chewy tapioca
+        pearls called “boba.” Its fun textures and sweet taste made it a global sensation.
+      </p>
+      <div class="callout">
+        <span>💡 Fun Fact:</span> The “bubbles” in bubble tea originally referred to the frothy bubbles
+        created when shaking the drink — tapioca pearls came later!
+      </div>
+      <p>
+        The drink spread rapidly across Asia and the world, evolving with countless flavors,
+        toppings, and styles — from classic milk tea to fruity slushies and cheese tea.
+      </p>
+    </section>
+
+    <section id="flavors" class="page">
+      <h2>🍹 Popular Boba Flavors & Toppings</h2>
+      <ul class="flavor-list">
+        <li>🧋 Classic Milk Tea — Black tea, milk, and chewy tapioca pearls</li>
+        <li>🍵 Matcha Green Tea — Earthy matcha powder with creamy milk and boba</li>
+        <li>🍓 Strawberry Fruit Tea — Refreshing strawberry flavor with popping boba</li>
+        <li>🥥 Coconut Milk Tea — Tropical coconut milk blended with tea and pearls</li>
+        <li>🍯 Honeydew Melon — Sweet melon-flavored tea with jelly cubes</li>
+        <li>🧀 Cheese Tea — Creamy cheese foam topping for a unique twist</li>
+      </ul>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png"
+        alt="Boba drinks"
+        class="flavor-img"
+      />
     </section>
 
     <section id="drops" class="page">
-      <h2>About Boba Drops</h2>
-      <p>Boba Drops by Hack Club invites students to build websites using HTML and CSS. Submit your site, earn $5 boba credit, and share your coding journey!</p>
-      <a href="https://boba.hackclub.com" target="_blank" class="btn">Join Boba Drops</a>
+      <h2>🎉 What is Boba Drops?</h2>
+      <p>
+        Boba Drops is a fun program by <a href="https://hackclub.com" target="_blank">Hack Club</a> that
+        encourages students to build personal websites using HTML and CSS. Once you submit your site,
+        you get rewarded with a $5 credit to enjoy delicious boba tea!
+      </p>
+      <a href="https://boba.hackclub.com" target="_blank" class="btn">Join Boba Drops Now</a>
+    </section>
+
+    <section id="tips" class="page">
+      <h2>💡 Tips & Fun Boba Facts</h2>
+      <ul class="tips-list">
+        <li>🥤 Try shaking your bubble tea well to mix flavors evenly.</li>
+        <li>🧋 Tapioca pearls are chewy because they’re made from starch extracted from cassava roots.</li>
+        <li>⏳ Best enjoyed within an hour of making for the freshest texture.</li>
+        <li>🍬 Some shops offer popping boba filled with juice for extra burst.</li>
+        <li>🎉 Boba tea culture inspired the creation of fun coding challenges like Boba Drops!</li>
+      </ul>
     </section>
 
     <section id="contact" class="page">
-      <h2>Contact</h2>
-      <p>Find me on <a href="https://github.com/E-e6" target="_blank">GitHub</a> and follow my coding adventures!</p>
+      <h2>📬 Contact</h2>
+      <p>
+        Curious to see more projects? Check out my
+        <a href="https://github.com/E-e6" target="_blank">GitHub</a> and follow my coding adventures!
+      </p>
+      <p>Let’s connect and share the boba love! 🧋💻</p>
     </section>
   </main>
 
