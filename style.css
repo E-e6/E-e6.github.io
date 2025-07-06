@@ -1,58 +1,153 @@
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(to bottom right, #ffe0ec, #f5faff);
-  color: #333;
-  scroll-behavior: smooth;
+/* Reset and base */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff0f5;
+  overflow-x: hidden;
+  position: relative;
+  color: #4b2e83;
 }
 
-nav {
+/* Background bubbles container */
+#boba-background {
   position: fixed;
-  width: 100%;
-  background-color: #ffcde1;
-  padding: 1rem;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: -1;
+  overflow: hidden;
+  background: linear-gradient(135deg, #ffdef0 0%, #fffdff 100%);
 }
 
-nav ul {
+/* Animated boba balls */
+.boba-ball {
+  position: absolute;
+  background: radial-gradient(circle at 30% 30%, #ff6f91, #c13d5f);
+  border-radius: 50%;
+  opacity: 0.7;
+  animation-timing-function: linear;
+  filter: drop-shadow(0 0 4px #ff6f91);
+  mix-blend-mode: screen;
+}
+
+/* Navigation bar with boba icons */
+.boba-nav {
+  position: fixed;
+  top: 20px; right: 20px;
+  background: #ffcce3aa;
+  backdrop-filter: blur(8px);
+  border-radius: 30px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 12px rgba(255, 105, 180, 0.4);
+  z-index: 10;
+}
+
+.boba-nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin: 0;
-  padding: 0;
+  gap: 15px;
 }
 
-nav a {
-  text-decoration: none;
-  color: #9c27b0;
-  font-weight: bold;
+.boba-nav li {
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+  user-select: none;
+  color: #a0357a;
 }
 
-.section {
-  min-height: 100vh;
-  padding: 6rem 2rem 2rem 2rem;
+.boba-nav li:hover {
+  color: #ff6f91;
+  transform: scale(1.3);
+}
+
+.boba-nav li.active {
+  color: #ff1e56;
+  transform: scale(1.5);
+}
+
+/* Main content and pages */
+main {
+  max-width: 800px;
+  margin: 4rem auto 2rem;
+  padding: 1rem;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  top: 0; left: 0;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  pointer-events: none;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
-.section.visible {
+.page.visible {
   opacity: 1;
-  transform: translateY(0);
+  pointer-events: auto;
+  transform: translateX(0);
 }
 
+/* Headings and text */
 h1, h2 {
   text-align: center;
+  margin-bottom: 1rem;
+  color: #9c27b0;
+  text-shadow: 1px 1px 2px #f0c1d1;
 }
 
-a {
-  color: #ff4081;
+p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  text-align: center;
+  color: #6a2c70;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  filter: drop-shadow(0 0 4px #ff6f91);
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: #ff6f91;
+  color: white;
+  padding: 0.75rem 1.8rem;
+  border-radius: 50px;
+  font-weight: bold;
   text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin: 0 auto;
+  display: block;
+  width: max-content;
 }
 
-a:hover {
-  text-decoration: underline;
+.btn:hover {
+  background: #d9416e;
+  box-shadow: 0 4px 10px #d9416eaa;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .boba-nav {
+    top: 10px; right: 10px;
+    padding: 8px 12px;
+  }
+  .boba-nav li {
+    font-size: 1.5rem;
+  }
+  main {
+    margin: 5rem 1rem 2rem;
+  }
 }

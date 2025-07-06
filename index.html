@@ -2,45 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>🧋 Eve’s Boba Site</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🧋 Eve’s Boba Wonderland</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <nav>
+  <div id="boba-background"></div>
+
+  <nav class="boba-nav">
     <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About Me</a></li>
-      <li><a href="#history">Boba History</a></li>
-      <li><a href="#drops">Boba Drops</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li data-target="home" class="active" title="Home">🧋</li>
+      <li data-target="about" title="About Me">🍡</li>
+      <li data-target="history" title="Boba History">🧉</li>
+      <li data-target="drops" title="Boba Drops">🎉</li>
+      <li data-target="contact" title="Contact">💌</li>
     </ul>
   </nav>
 
-  <section id="home" class="section">
-    <h1>Welcome to Eve's Boba Universe!</h1>
-    <p>Explore the world of boba tea and web development.</p>
-  </section>
+  <main>
+    <section id="home" class="page visible">
+      <h1>Welcome to Eve's Boba Wonderland!</h1>
+      <p>Step inside for the sweetest mix of boba and code.</p>
+    </section>
 
-  <section id="about" class="section">
-    <h2>About Me</h2>
-    <p>I'm Eve, a student passionate about coding and bubble tea!</p>
-  </section>
+    <section id="about" class="page">
+      <h2>About Me</h2>
+      <p>I'm Eve — a coding enthusiast and boba lover, crafting cool projects with passion!</p>
+      <img src="https://cdn-icons-png.flaticon.com/512/3186/3186964.png" alt="Cute boba" />
+    </section>
 
-  <section id="history" class="section">
-    <h2>History of Boba Tea</h2>
-    <p>Boba tea, also known as bubble tea, originated in Taiwan in the early 1980s. It's a tea-based drink that often contains chewy tapioca balls, milk, and flavoring. The drink has since gained international popularity, becoming a cultural phenomenon worldwide. :contentReference[oaicite:24]{index=24}</p>
-  </section>
+    <section id="history" class="page">
+      <h2>Boba History</h2>
+      <p>Boba tea was born in Taiwan in the 1980s — chewy tapioca pearls, sweet milk tea, and endless flavors captured hearts worldwide!</p>
+      <p><em>Fun fact:</em> The name "bubble tea" comes from the frothy bubbles formed when shaking the drink.</p>
+    </section>
 
-  <section id="drops" class="section">
-    <h2>About Boba Drops</h2>
-    <p>Boba Drops is a program by Hack Club that encourages students to build and publish personal websites using HTML and CSS. Participants who successfully submit their websites receive a $5 reward to enjoy boba tea. :contentReference[oaicite:25]{index=25}</p>
-  </section>
+    <section id="drops" class="page">
+      <h2>About Boba Drops</h2>
+      <p>Boba Drops by Hack Club invites students to build websites using HTML and CSS. Submit your site, earn $5 boba credit, and share your coding journey!</p>
+      <a href="https://boba.hackclub.com" target="_blank" class="btn">Join Boba Drops</a>
+    </section>
 
-  <section id="contact" class="section">
-    <h2>Contact</h2>
-    <p>Check out my projects on <a href="https://github.com/E-e6" target="_blank">GitHub</a>.</p>
-  </section>
+    <section id="contact" class="page">
+      <h2>Contact</h2>
+      <p>Find me on <a href="https://github.com/E-e6" target="_blank">GitHub</a> and follow my coding adventures!</p>
+    </section>
+  </main>
 
   <script src="script.js"></script>
 </body>
